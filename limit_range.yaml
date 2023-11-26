@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: LimitRange
+metadata:
+  name: limit-range
+  namespace: zad5
+spec:
+  limits:
+  - default:
+      memory: 250Mi
+      cpu: 250m
+    defaultRequest:
+      memory: 150Mi
+      cpu: 150m
+    type: Container
